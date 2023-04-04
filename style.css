@@ -40,6 +40,12 @@ body {
   display: flex;
   align-items: center;
   z-index: 100;
+  transition: .5s;
+}
+
+.header.sticky {
+  background: var(--bg-color);
+  box-shadow: 0 .1rem 1rem var(--shadow-color);
 }
 
 .logo {
@@ -58,6 +64,14 @@ body {
   margin-right: 3.5rem;
 }
 
+.header.sticky .navbar a {
+  color: var(--text-color);
+}
+
+.header.sticky .navbar a.active {
+  color: var(--main-color);
+}
+
 .navbar a.active::before {
   content: '';
   position: absolute;
@@ -68,10 +82,20 @@ body {
   background: var(--white-color);
 }
 
+.header.sticky .navbar a.active::before {
+  background: var(--main-color);
+  opacity: .7;
+}
+
 #darkMode-icon {
   font-size: 2.4rem;
   color: var(--white-color);
   cursor: pointer;
+}
+
+.header.sticky #darkMode-icon {
+  color: var(--main-color);
+  opacity: .9;
 }
 
 section {
@@ -238,6 +262,11 @@ span {
   gap: 4rem;
 }
 
+.about-img {
+  width: 60%;
+  padding: 10rem;
+}
+
 .about-img img {
   width: 25vw;
 }
@@ -259,4 +288,10 @@ span {
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+}
+
+.services .services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
