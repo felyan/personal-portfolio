@@ -1,3 +1,8 @@
+// menu icon navbar
+
+let menuIcon = documnet.querySelector("#menu-icon");
+let navbar = documnet.querySelector(".navbar");
+
 // scroll sections active link
 
 let sections = document.querySelectorAll("section");
